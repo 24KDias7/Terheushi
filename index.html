@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="CrimLib — криминалистика және қылмыстық процесс бойынша электрондық анықтамалық.">
+  <title>CrimLib — анықтамалық</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-button" id="menuButton" aria-label="Мәзірді ашу"><span></span><span></span><span></span></button>
+    <button class="brand" id="homeButton">CRIMLIB</button>
+    <span class="topbar-spacer"></span>
+  </header>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head"><strong>CRIMLIB</strong><button id="closeDrawer" aria-label="Жабу">×</button></div>
+    <button class="drawer-link" data-home>Басты бет</button>
+    <a class="drawer-link" href="https://adilet.zan.kz/kaz" target="_blank" rel="noopener">Әділет — нормативтік актілер ↗</a>
+    <div class="drawer-note">Оқу-әдістемелік анықтамалық</div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <main class="page">
+    <section class="search-wrap" aria-label="Іздеу">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.2"></circle><path d="m16.2 16.2 5 5"></path></svg>
+      <input id="searchInput" type="search" placeholder="Іздеу..." autocomplete="off" aria-label="Атауы бойынша іздеу">
+      <button id="clearSearch" aria-label="Іздеуді тазалау">×</button>
+    </section>
+
+    <div class="view-heading">
+      <button class="back-button hidden" id="backButton">‹ Артқа</button>
+      <h1 id="pageTitle">Анықтамалық</h1>
+    </div>
+    <p class="page-subtitle" id="pageSubtitle">Криминалистика және қылмыстық процесс материалдары</p>
+
+    <section id="categoryGrid" class="category-grid" aria-label="Бөлімдер"></section>
+    <section id="listView" class="list-view hidden" aria-label="Материалдар"></section>
+    <article id="articleView" class="article-view hidden"></article>
+    <div id="emptyState" class="empty-state hidden">Іздеу бойынша материал табылмады.</div>
+  </main>
+
+  <footer class="footer">
+    <span>CRIMLIB</span><span>Оқу мақсатындағы анықтамалық</span>
+  </footer>
+  <script src="./app.js"></script>
+</body>
+</html>
